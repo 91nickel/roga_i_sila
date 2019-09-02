@@ -1,0 +1,246 @@
+<!DOCTYPE>
+<!--[if IE 7]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8> <![endif]-->
+<!--[if IE 9]>    <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8"/>
+		<title>РОГА&amp;СИЛА - Детальная</title>
+		<link href="../favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="../css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="template_styles.css"/>
+		<link rel="stylesheet" type="text/css" href="styles.css"/>
+		<link href="../js/bxslider/jquery.bxslider.css" rel="stylesheet" />
+		<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.placeholder.js"></script>
+		<script type="text/javascript" src="../js/bxslider/jquery.bxslider.js"></script>
+		<script type="text/javascript" src="../js/default_script.js"></script>
+
+		<link type="text/css" href="../js/jquery.ui.selectmenu/jquery.ui.core.css" rel="stylesheet" />
+		<link type="text/css" href="../js/jquery.ui.selectmenu/jquery.ui.theme.css" rel="stylesheet" />
+		<link type="text/css" href="../js/jquery.ui.selectmenu/jquery.ui.selectmenu.css" rel="stylesheet" />
+		<script type="text/javascript" src="../js/jquery.ui.selectmenu/jquery.ui.core.js"></script>
+		<script type="text/javascript" src="../js/jquery.ui.selectmenu/jquery.ui.widget.js"></script>
+		<script type="text/javascript" src="../js/jquery.ui.selectmenu/jquery.ui.position.js"></script>
+		<script type="text/javascript" src="../js/jquery.ui.selectmenu/jquery.ui.selectmenu.js"></script>
+		<!--[if lt IE 9]>
+			<script src="../js/html5shiv.js"></script>
+		<![endif]-->
+		
+		<script>
+			/*перенести в скрипт компонента*/
+			$(document).ready(function(){
+				$(".slide_panel").click(function(){
+					$(this).toggleClass("show");
+					var slide_block = $(this).siblings(".slide_block");
+
+					if ($(this).hasClass("show")){
+						slide_block.slideDown("1000");
+					}
+					else{
+						slide_block.slideUp("1000");	
+					}
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="base_layer"></div>
+			<header class="header">
+				<div class="width_960">
+					<div class="inline-block">
+						<span class="logo inline-block"></span>
+					</div>
+					<nav class="top_menu grey inline-block">
+						<a href="/auth/register.php" class="register">Регистрация</a>
+						<a href="/auth/" class="auth">Авторизация</a>
+					</nav>
+					<div class="basket_block inline-block">
+						<a href="#" class="basket_product_count inline-block">0</a>
+						<a href="#" class="order_button pie">Оформить заказ</a>
+					</div>
+				</div>
+			</header>
+			<section class="fixed_block">
+				<div class="width_960">
+					<form name="search_form" class="search_form pie">
+							<div class="search_form_wrapper">
+								<input type="text" placeholder="Поиск по сайту"/>
+								<input type="submit" value=""/>
+							</div>
+					</form>
+					<nav class="main_menu">
+						<ul>
+							<li class="submenu pie">
+								<span>Легковые</span>
+								<div class="submenu_border"></div>
+								<ul>
+									<li><a href="#">Седаны</a></li>
+									<li><a href="#">Хетчбеки</a></li>
+									<li><a href="#">Универсалы</a></li>
+									<li><a href="#">Купе</a></li>
+									<li><a href="#">Родстеры</a></li>
+								</ul>
+							<li class="submenu pie">
+								<span>Внедорожники</span>
+								<div class="submenu_border"></div>
+								<ul>
+									<li><a href="#">Рамные</a></li>
+									<li><a href="#">Пикапы</a></li>
+									<li><a href="#">Кроссоверы</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Раритетные</a></li>
+							<li><a href="#">Распродажа</a></li>
+							<li><a href="#">Аксессуары</a></li>
+					</ul>
+					</nav>
+				</div>
+			</section>
+			<section class="content">
+				<div class="work_area width_960">
+					<nav class="nav_chain">
+							<a href="/">Главная</a>
+							<span class="nav_arrow inline-block"></span>
+							<span>Легковые</span>
+					</nav>
+					<h1 class="push_right">BMW Z4 sDrive 35i</h1>
+						<figure class="product_detail">
+							<figcaption>
+								<script>
+								//Скрипт слайдера перенести в компонент
+									$(document).ready(function(){
+										$('.b-product-photo__list').bxSlider({
+											pagerCustom: '.b-product-photo__thumbnail',
+											controls: false,
+											useCSS: false,
+											mode: 'fade'
+										});
+									});
+								</script>
+								<div class="b-product-photo">
+									<ul class="b-product-photo__list">
+										<li class="b-product-photo__list-item">
+											<img class="b-product-photo__list-item__content" src="../images/BMW-Z4-sDrive-35i_1.jpg" alt="BMW Z4 sDrive 35i 1">
+										</li>
+										<li class="b-product-photo__list-item">
+											<img class="b-product-photo__list-item__content" src="../images/BMW-Z4-sDrive-35i_2.jpg" alt="BMW Z4 sDrive 35i 2">
+										</li>
+										<li class="b-product-photo__list-item">
+											<img class="b-product-photo__list-item__content" src="../images/BMW-Z4-sDrive-35i_3.jpg" alt="BMW Z4 sDrive 35i 3">
+										</li>
+									</ul>
+									<div class="b-product-photo__thumbnail">
+										<a data-slide-index="0" href="" class="b-product-photo__thumbnail-item">
+											<img class="b-product-photo__thumbnail-item__content" src="../images/BMW-Z4-sDrive-35i_1.jpg" alt="BMW Z4 sDrive 35i 1 Thumbnail">
+										</a>
+										<a data-slide-index="1" href="" class="b-product-photo__thumbnail-item">
+											<img class="b-product-photo__thumbnail-item__content" src="../images/BMW-Z4-sDrive-35i_2.jpg" alt="BMW Z4 sDrive 35i 2 Thumbnail">
+										</a>
+										<a data-slide-index="2" href="" class="b-product-photo__thumbnail-item">
+											<img class="b-product-photo__thumbnail-item__content" src="../images/BMW-Z4-sDrive-35i_3.jpg" alt="BMW Z4 sDrive 35i 3 Thumbnail">
+										</a>
+									</div>
+								</div>
+								<div class="price_block">
+									<span class="old_price">4 220 000 руб.</span>
+									<p class="current_price dark_grey"><b class="orange">3 532 000</b> руб.</p>
+									<a class="buy_button inverse">В корзину</a>
+								</div>
+								<div class="slide_box">
+									<h3 class=" slide_panel show">Параметры
+										<div class="slide_button"></div>
+									</h3>
+									<div class="slide_block" style="display:block">
+										<table class="features">
+											<tr>
+												<td><div><span>Салон:</span></div></td>
+												<td>Кожа Kansas черный</td>
+											</tr>
+											<tr>
+												<td><div><span>Класс:</span></div></td>
+												<td>Спортивные авто</td>
+											</tr>
+											<tr>
+												<td><div><span>КПП:</span></div></td>
+												<td>АКПП</td>
+											</tr>
+											<tr>
+												<td><div><span>Год выпуска:</span></div></td>
+												<td>2013</td>
+											</tr>
+											<tr>
+												<td><div><span>Цвет:</span></div></td>
+												<td>Желтый металлик</td>
+											</tr>
+											<tr>
+												<td><div><span>Кузов:</span></div></td>
+												<td>Родстер</td>
+											</tr>
+											<tr>
+												<td><div><span>Двигатель:</span></div></td>
+												<td>Бензиновый, 2.0, 184.0 л.с.</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="slide_box">
+									<div class="slide_button"></div>
+									<h3 class="slide_panel">Описание</h3>
+									<div class="slide_block">
+								</div>
+								</div>
+							</figcaption>
+						</figure>
+				</div>
+			</section>
+			<div class="d_footer width_960"></div>
+			<div class="clear"></div>
+		</div>
+		<footer class="footer width_960">
+			<section class="float_inner bottom_block">
+				<section class="shops_block">
+					<h2 class="inline-block">Наши салоны</h2>
+					<span class="dark_grey all_list">&nbsp;/&nbsp;<a href="#" class="text_decor_none"><b>Все</b></a></span>
+					<div>
+						<figure class="shops_block_item">
+							<a href=""><img src="../images/test_shop_1.png" alt="" title="" /></a>
+							<figcaption class="shops_block_item_description">
+								<h3 class="shops_block_item_name">Салон на братиславской</h3>
+								<p class="dark_grey">Москва, ул. Братиславская, дом 23</p>
+								<p class="black">+7 495 987 65 43</p>
+								<p>Часы работы:<br/> c 9.00 до 21.00</p>
+							</figcaption>
+						</figure>
+						<figure class="shops_block_item">
+							<a href=""><img src="../images/test_shop_2.png" alt="" title="" /></a>
+							<figcaption class="shops_block_item_description">
+								<h3 class="shops_block_item_name">Салон на братиславской</h3>
+								<p class="dark_grey">Москва, ул. Братиславская, дом 23</p>
+								<p class="black">+7 495 987 65 43</p>
+								<p>Часы работы:<br/> c 9.00 до 21.00</p>
+							</figcaption>
+						</figure>
+					</div>
+				</section>
+				<section class="info_block left_block_shadow">
+					<h2>Информация</h2>
+					<nav class="grey">
+						<ul>
+							<li><a href="#">О компании</a></li>
+							<li><a href="#">Контактная информация</a></li>
+							<li><a href="#">Условия продаж</a></li>
+							<li><a href="#">Финансовый отдел</a></li>
+							<li><a href="#">Для клиентов</a></li>
+						</ul>
+					</nav>
+				</section>
+			</section>
+			<div class="footer_inner">
+				<a href="http://www.qsoft.ru" target="_blank" class="qsoft grey inline-block">Сделано в</a>
+				<div class="copy">&copy; 2013 Рога &amp; Сила. Продажа автомобилей.</div>
+			</div>
+		</footer>
+	</body>
+</html>
