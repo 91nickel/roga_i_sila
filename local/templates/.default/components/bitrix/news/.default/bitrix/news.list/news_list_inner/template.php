@@ -3,8 +3,6 @@
 }
 $this->setFrameMode(true);
 ?>
-<br>
-<h2><? $APPLICATION->ShowTitle(); ?></h2>
 
 <div class="news-list">
 
