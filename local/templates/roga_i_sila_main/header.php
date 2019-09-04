@@ -46,8 +46,33 @@
                 <a href="#" class="auth">Авторизация</a>
             </nav>
             <div class="basket_block inline-block">
-                <a href="#" class="basket_product_count inline-block">0</a>
-                <a href="#" class="order_button pie">Оформить заказ</a>
+                <? $APPLICATION->IncludeComponent(
+                    "bitrix:sale.basket.basket.line",
+                    "basket.line.top",
+                    array(
+                        "COMPONENT_TEMPLATE" => "basket.line.top",
+                        "HIDE_ON_BASKET_PAGES" => "Y",
+                        "PATH_TO_AUTHORIZE" => "",
+                        "PATH_TO_BASKET" => "/personal/cart/",
+                        "PATH_TO_ORDER" => "/personal/order/make/",
+                        "PATH_TO_PERSONAL" => "/personal/",
+                        "PATH_TO_PROFILE" => "/personal/",
+                        "PATH_TO_REGISTER" => "/login/",
+                        "POSITION_FIXED" => "N",
+                        "SHOW_AUTHOR" => "N",
+                        "SHOW_DELAY" => "N",
+                        "SHOW_EMPTY_VALUES" => "Y",
+                        "SHOW_IMAGE" => "Y",
+                        "SHOW_NOTAVAIL" => "N",
+                        "SHOW_NUM_PRODUCTS" => "Y",
+                        "SHOW_PERSONAL_LINK" => "N",
+                        "SHOW_PRICE" => "Y",
+                        "SHOW_PRODUCTS" => "N",
+                        "SHOW_REGISTRATION" => "N",
+                        "SHOW_SUMMARY" => "Y",
+                        "SHOW_TOTAL_PRICE" => "Y"
+                    )
+                ); ?>
             </div>
         </div>
     </header>
