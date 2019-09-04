@@ -14,6 +14,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
+<br>
 <h2 class="push_right"><? $APPLICATION->ShowTitle() ?></h2>
 <div>
     <? foreach ($arResult['ITEMS'] as $arItem) : ?>
