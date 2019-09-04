@@ -145,7 +145,7 @@ hr.bottom_line {
 }
 
 
-/*left_menu*/
+/*menu_left*/
 
 .left_menu,
 .left_menu li {
@@ -200,7 +200,7 @@ hr.bottom_line {
 }
 
 
-/*.left_menu ul a:hover, */
+/*.menu_left ul a:hover, */
 
 .left_menu ul span {
     color: #fff;

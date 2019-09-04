@@ -19,11 +19,14 @@
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery.placeholder.js");
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/bxslider/jquery.bxslider.js");
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/default_script.js");
-
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/masonry.min.js");
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery.ui.selectmenu/jquery.ui.core.js");
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery.ui.selectmenu/jquery.ui.widget.js");
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery.ui.selectmenu/jquery.ui.position.js");
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery.ui.selectmenu/jquery.ui.selectmenu.js");
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery-ui-1.10.3.custom.min.js");
+
+
     ?>
 </head>
 
@@ -36,7 +39,7 @@
     <header class="header">
         <div class="width_960">
             <div class="inline-block">
-                <span class="logo inline-block"></span>
+                <a href="/"><span class="logo inline-block"></span></a>
             </div>
             <nav class="top_menu grey inline-block">
                 <a href="#" class="register">Регистрация</a>
@@ -56,32 +59,24 @@
                     <input type="submit" value=""/>
                 </div>
             </form>
-            <nav class="main_menu">
-                <ul>
-                    <li class="submenu pie">
-                        <span>Легковые</span>
-                        <div class="submenu_border"></div>
-                        <ul>
-                            <li><a href="#">Седаны</a></li>
-                            <li><a href="#">Хетчбеки</a></li>
-                            <li><a href="#">Универсалы</a></li>
-                            <li><a href="#">Купе</a></li>
-                            <li><a href="#">Родстеры</a></li>
-                        </ul>
-                    <li class="submenu pie">
-                        <span>Внедорожники</span>
-                        <div class="submenu_border"></div>
-                        <ul>
-                            <li><a href="#">Рамные</a></li>
-                            <li><a href="#">Пикапы</a></li>
-                            <li><a href="#">Кроссоверы</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Раритетные</a></li>
-                    <li><a href="#">Распродажа</a></li>
-                    <li><a href="#">Новинки</a></li>
-                </ul>
-            </nav>
+            <? $APPLICATION->IncludeComponent(
+                "bitrix:menu",
+                "menu_top",
+                array(
+                    "ALLOW_MULTI_SELECT" => "N",
+                    "CHILD_MENU_TYPE" => "top",
+                    "DELAY" => "N",
+                    "MAX_LEVEL" => "2",
+                    "MENU_CACHE_GET_VARS" => array(),
+                    "MENU_CACHE_TIME" => "3600",
+                    "MENU_CACHE_TYPE" => "N",
+                    "MENU_CACHE_USE_GROUPS" => "Y",
+                    "ROOT_MENU_TYPE" => "top",
+                    "USE_EXT" => "Y",
+                    "COMPONENT_TEMPLATE" => "menu_top"
+                ),
+                false
+            ); ?>
         </div>
     </section>
     <section class="content">
