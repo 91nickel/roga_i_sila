@@ -12,16 +12,19 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
+
 <section class="shops_block">
-    <h2 class="inline-block">Наши салоны</h2>
-    <span class="dark_grey all_list">&nbsp;/&nbsp;<a href="#" class="text_decor_none"><b>Все</b></a></span>
+    <h2 class="inline-block"><?= $arResult['NAME']?></h2>
+    <span class="dark_grey all_list">&nbsp;/&nbsp;<a href="<?= $arResult['SECTION_PAGE_URL']?>" class="text_decor_none"><b><?= $arResult['SECTIONS_NAME'] ?></b></a></span>
     <div>
         <!--Блок навигации-->
+
         <? if ($arParams["DISPLAY_TOP_PAGER"]): ?>
             <?= $arResult["NAV_STRING"] ?><br/>
         <? endif; ?>
 
         <!--Основной блок-->
+
         <? foreach ($arResult["ITEMS"] as $arItem): ?>
             <?
             $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
@@ -54,18 +57,21 @@ $this->setFrameMode(true);
                 <figcaption class="shops_block_item_description">
                     <!--Блок имени-->
                     <? if ($arParams["DISPLAY_NAME"] != "N" && $arItem["NAME"]): ?>
-                        <h3 class="shops_block_item_name"><? echo $arItem["NAME"] ?></h3>
+                        <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>">
+                            <h3 class="shops_block_item_name"><? echo $arItem["NAME"] ?></h3>
+                        </a>
                     <? endif; ?>
 
                     <p class="dark_grey"><?= $arItem["DISPLAY_PROPERTIES"]["ADRESS"]['VALUE'] ?></p>
-                    <p class="black"><?= $arItem["DISPLAY_PROPERTIES"]["PHONE"]['VALUE']?></p>
-                    <p><?= $arItem["DISPLAY_PROPERTIES"]["WORK_HOURS"]['NAME'] ?>:<br/> <?= $arItem["DISPLAY_PROPERTIES"]["WORK_HOURS"]['VALUE'] ?></p>
+                    <p class="black"><?= $arItem["DISPLAY_PROPERTIES"]["PHONE"]['VALUE'] ?></p>
+                    <p><?= $arItem["DISPLAY_PROPERTIES"]["WORK_HOURS"]['NAME'] ?>
+                        :<br/> <?= $arItem["DISPLAY_PROPERTIES"]["WORK_HOURS"]['VALUE'] ?></p>
 
                 </figcaption>
             </figure>
 
         <? endforeach; ?>
-<!--        Блок навигации-->
+        <!--        Блок навигации-->
         <? if ($arParams["DISPLAY_BOTTOM_PAGER"]): ?>
             <br/><?= $arResult["NAV_STRING"] ?>
         <? endif; ?>
