@@ -1,6 +1,8 @@
 $(document).ready(function () {
-    let slider = $(".bxslider").bxSlider({
-        auto: true,
-        pause: 3000
-    });
+    if ($(".bxslider .banner").length > 1) {
+        $(".bxslider").bxSlider({
+            auto: true,
+            pause: 3000
+        });
+    }
 });
