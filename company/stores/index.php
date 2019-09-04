@@ -1,7 +1,12 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Наши салоны");
-?><?$APPLICATION->IncludeComponent(
+?>
+
+    <br>
+    <h2><? $APPLICATION->ShowTitle(); ?></h2>
+
+<?$APPLICATION->IncludeComponent(
 	"qsoft:stores.list", 
 	"stores_full", 
 	array(

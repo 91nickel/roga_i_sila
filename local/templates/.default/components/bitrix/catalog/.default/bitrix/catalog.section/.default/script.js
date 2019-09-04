@@ -1,10 +1,11 @@
 /*перенести  в скрипт компонента*/
-$(window).on('load', function () {
+$(document).ready(function () {
     let wall = new Masonry(document.getElementById('catalog'), {
         isFitWidth: true,
         isResizable: false,
         gutterWidth: 0
     });
+
     $("#slider-range").slider({
         animate: "slow",
         range: true,
