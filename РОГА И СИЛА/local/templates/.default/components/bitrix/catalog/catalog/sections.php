@@ -72,7 +72,6 @@ $this->setFrameMode(true);
                 "ADD_ELEMENT_CHAIN" => (isset($arParams["ADD_ELEMENT_CHAIN"]) ? $arParams["ADD_ELEMENT_CHAIN"] : ''),
                 "ADD_SECTIONS_CHAIN" => (isset($arParams["ADD_SECTIONS_CHAIN"]) ? $arParams["ADD_SECTIONS_CHAIN"] : ''),
 
-
                 "PRICE_VAT_INCLUDE" => $arParams["PRICE_VAT_INCLUDE"],
 
                 "DISPLAY_TOP_PAGER" => $arParams["DISPLAY_TOP_PAGER"],

@@ -125,7 +125,7 @@
 
                     <? $APPLICATION->IncludeComponent(
                         "bitrix:menu",
-                        "left_menu",
+                        "menu_left",
                         array(
                             "ALLOW_MULTI_SELECT" => "N",
                             "CHILD_MENU_TYPE" => "left",
@@ -137,7 +137,7 @@
                             "MENU_CACHE_USE_GROUPS" => "Y",
                             "ROOT_MENU_TYPE" => "left",
                             "USE_EXT" => "N",
-                            "COMPONENT_TEMPLATE" => "left_menu"
+                            "COMPONENT_TEMPLATE" => "menu_left"
                         ),
                         false
                     ); ?>
