@@ -1,7 +1,16 @@
 <?
 define("NEED_AUTH", true);
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+if ($USER->IsAuthorized()) {
+    LocalRedirect('/');
+}
+$APPLICATION->SetTitle("Авторизация"); ?>
 
+<h2>
+    <? $APPLICATION->ShowTitle() ?>
+</h2>
+
+<?
 $userName = CUser::GetFullName();
 if (!$userName)
 	$userName = CUser::GetLogin();
@@ -18,9 +27,6 @@ if (!$userName)
 	<?endif?>
 </script>
 
-<?
-$APPLICATION->SetTitle("Авторизация");
-?>
 <p>Вы зарегистрированы и успешно авторизовались.</p>
  
 <p><a href="<?=SITE_DIR?>">Вернуться на главную страницу</a></p>

@@ -80,11 +80,11 @@ $arUrlRewrite=array (
     'PATH' => '/store/index.php',
     'SORT' => 100,
   ),
-  12 => 
+  14 => 
   array (
     'CONDITION' => '#^\\??(.*)#',
     'RULE' => '&$1',
-    'ID' => 'bitrix:catalog.section',
+    'ID' => 'qsoft:models.week',
     'PATH' => '/index.php',
     'SORT' => 100,
   ),
