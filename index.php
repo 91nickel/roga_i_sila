@@ -3,15 +3,17 @@
 <? $APPLICATION->SetTitle("Автосалон РОГА и СИЛА") ?>
 
 <? $APPLICATION->IncludeComponent(
-    "qsoft:advertising.banner",
-    "",
-    Array(
-        "CACHE_TIME" => "0",
-        "CACHE_TYPE" => "A",
-        "NOINDEX" => "N",
-        "QUANTITY" => $count = $USER->IsAuthorized() ? "3" : "1",
-        "TYPE" => "MAIN"
-    )
+	"qsoft:advertising.banner", 
+	".default", 
+	array(
+		"CACHE_TIME" => "3600",
+		"CACHE_TYPE" => "A",
+		"NOINDEX" => "N",
+		"QUANTITY" => $count=$USER->IsAuthorized()?"3":"1",
+		"TYPE" => "MAIN",
+		"COMPONENT_TEMPLATE" => ".default"
+	),
+	false
 ); ?>
 <? $APPLICATION->IncludeComponent(
     "qsoft:models.week",
@@ -32,7 +34,7 @@
         "BASKET_URL" => "/personal/cart",
         "BROWSER_TITLE" => "-",
         "CACHE_FILTER" => "N",
-        "CACHE_GROUPS" => "Y",
+        "CACHE_GROUPS" => "N",
         "CACHE_TIME" => "3600",
         "CACHE_TYPE" => "A",
         "COMMON_ADD_TO_BASKET_ACTION" => "ADD",

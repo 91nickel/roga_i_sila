@@ -41,10 +41,19 @@
             <div class="inline-block">
                 <a href="/"><span class="logo inline-block"></span></a>
             </div>
-            <nav class="top_menu grey inline-block">
-                <a href="#" class="register">Регистрация</a>
-                <a href="#" class="auth">Авторизация</a>
-            </nav>
+            <? if ($USER->IsAuthorized()) : ?>
+                <nav class="top_menu grey inline-block authorize">
+                    <span>Здравствуйте,</span>
+                    <a href="#"><b class="user_name"><?= $USER->GetFirstName() . ' ' . $USER->GetParam('SECOND_NAME') ?></b></a>
+                    <a href="/personal/">Личный кабинет</a>
+                    <a class="logout" href="/personal/account/?logout=yes">Выйти</a>
+                </nav>
+            <? else : ?>
+                <nav class="top_menu grey inline-block">
+                    <a href="/login/" class="register">Регистрация</a>
+                    <a href="/auth/" class="auth">Авторизация</a>
+                </nav>
+            <? endif ?>
             <div class="basket_block inline-block">
                 <? $APPLICATION->IncludeComponent(
                     "bitrix:sale.basket.basket.line",
