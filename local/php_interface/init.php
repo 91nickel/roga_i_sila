@@ -6,7 +6,6 @@ use Bitrix\Main\Mail\Event;
 AddEventHandler("main", "OnAfterUserLogin", array("AfterLoginClass", "AfterLogin"));
 class AfterLoginClass
 {
-
     public function AfterLogin(&$arFields)
     {
         $rsUser = CUser::GetByID($arFields['USER_ID']);

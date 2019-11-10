@@ -1,0 +1,48 @@
+.page_nav{
+    text-align: center;
+    font-family: "PTSans_Bold";
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+    .page_nav p{
+        font-family: "PTSans_Regular";
+        font-size: 14px;
+        margin-bottom: 0.5em;
+    }
+    .page_nav a, .page_nav span{
+        color: #000;
+        vertical-align: middle;
+        display: inline-block;
+        zoom: 1;
+        margin-left: 5px;
+        padding: 1px 9px;
+    }
+    .page_nav .current{
+        background:black;
+        color:white;
+    }
+    .page_nav .other{
+        margin: 0;
+        padding: 0;
+    }
+    .page_nav .prev, .page_nav .next{
+        background: url("../images/sprite.png") no-repeat;
+        width: 9px;
+        height: 15px;
+        padding: 0;
+    }
+    .page_nav .prev{
+        background-position: 0 -80px;
+        margin-right: 8px;
+    }
+    .page_nav .next{
+        background-position: -35px -80px;
+        margin-left: 13px
+    }
+    .page_nav .prev:hover{
+        background-position: 0 -105px;
+    }
+    .page_nav .next:hover{
+        background-position: -35px -105px;
+    }
